@@ -1,0 +1,9 @@
+
+"merp"
+{
+	"base" 			"helix"
+	"title" 		"Mass Effect RP"
+	"author" 		"bruck"
+	"category"	"rp"
+	"menusystem"	"1"
+}
