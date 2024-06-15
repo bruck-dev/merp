@@ -1,4 +1,5 @@
 ix.command.Add("CharSetCustomClass", {
+	description = "Sets a character's custom class.",
 	adminOnly = true,
 	arguments = {
 		ix.type.character,

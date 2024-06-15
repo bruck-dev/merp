@@ -303,7 +303,13 @@ function PANEL:Init()
 		local shouldShow = hook.Run("ShouldShowOnScoreboard", v)
 
 		if(character and shouldShow) then
-			local class = character:GetCustomClass() or character:GetClassName() or "ERROR"
+			local class = character:GetCustomClass()
+
+			-- Backup case in the event that no custom class has been set on a character
+			if class == "NULL" then
+				class = character:GetClassName() or "ERROR"
+			end
+			
 			local priority = character:GetClassScoreboardPriority()
 
 			if (!availableClasses[class]) then

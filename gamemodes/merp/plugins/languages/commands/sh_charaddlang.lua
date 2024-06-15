@@ -4,6 +4,7 @@
 --]]
 
 ix.command.Add("CharAddLang", {
+	description = "Adds a language to a character.",
 	adminOnly = true,
 	arguments = {
 		ix.type.character,

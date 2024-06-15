@@ -342,6 +342,29 @@ hook.Add("PopulateScoreboardPlayerMenu", "ixAdmin", function(client, menu)
 			end
 		end
 		}
+
+		local MONEY_NAME = string.gsub(ix.util.ExpandCamelCase(ix.currency.plural), "%s", "")
+		options["Add " .. MONEY_NAME] = {
+			function()
+				if LocalPlayer():IsAdmin() == false then ix.util.Notify("This function is only available for admins.") return end
+				if (IsValid(client) and LocalPlayer():IsAdmin()) then
+					Derma_StringRequest("Add " .. MONEY_NAME, "How much?", '0', function(amount)
+						ix.command.Send("CharAdd" .. MONEY_NAME, client:Name(), amount)
+					end, nil, "Add", "Cancel")
+				end
+			end
+		}
+
+		options["Take " .. MONEY_NAME] = {
+			function()
+				if LocalPlayer():IsAdmin() == false then ix.util.Notify("This function is only available for admins.") return end
+				if (IsValid(client) and LocalPlayer():IsAdmin()) then
+					Derma_StringRequest("Take " .. MONEY_NAME, "How much?", '0', function(amount)
+						ix.command.Send("CharTake" .. MONEY_NAME, client:Name(), amount)
+					end, nil, "Take", "Cancel")
+				end
+			end
+		}
 	end
 	
 	for k, v in pairs(options) do

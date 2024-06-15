@@ -5,6 +5,7 @@
 
 ix.command.Add("CharTakeLang", {
 	adminOnly = true,
+	description = "Removes the specified language from a character.",
 	arguments = {
 		ix.type.character,
 		ix.type.string
