@@ -282,6 +282,15 @@ hook.Add("PopulateScoreboardPlayerMenu", "ixAdmin", function(client, menu)
 			end
 		}
 
+		options["Clear Custom Class"] = {
+			function()
+				if LocalPlayer():IsAdmin() == false then ix.util.Notify("This function is only available for admins.") return end
+				if (IsValid(client) and LocalPlayer():IsAdmin()) then
+					ix.command.Send("CharTakeCustomClass", client:Name())
+				end
+			end
+		}
+
 		options["Change Model"] = {
 			function()
 				if LocalPlayer():IsAdmin() == false then ix.util.Notify("This function is only available for admins.") return end

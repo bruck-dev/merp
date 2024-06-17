@@ -21,7 +21,7 @@ ix.config.Add("localEventDistance", 560, "The maximum distance people can hear a
 ix.command.Add("LocalEvent", {
 	description = "Execute an event only players within a certain distance can see.",
 	arguments = ix.type.text,
-	superAdminOnly = true,
+	adminOnly = true,
 	OnRun = function(self, client, text)
 		ix.chat.Send(client, "localevent", text)
 	end

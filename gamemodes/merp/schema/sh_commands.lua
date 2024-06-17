@@ -1,38 +1,3 @@
--- Radio
-do
-	local COMMAND = {}
-	COMMAND.description = "Communicate over a long distance with a radio."
-	COMMAND.arguments = ix.type.text
-
-	function COMMAND:OnRun(client, message)
-		local character = client:GetCharacter()
-		local radios = character:GetInventory():GetItemsByUniqueID("radio", true)
-		local item
-
-		for k, v in ipairs(radios) do
-			if (v:GetData("enabled", false)) then
-				item = v
-				break
-			end
-		end
-
-		if (item) then
-			if (!client:IsRestricted()) then
-				ix.chat.Send(client, "radio", message)
-				ix.chat.Send(client, "radio_eavesdrop", message)
-			else
-				return "@notNow"
-			end
-		elseif (#radios > 0) then
-			return "@radioNotOn"
-		else
-			return "@radioRequired"
-		end
-	end
-
-	ix.command.Add("Radio", COMMAND)
-end
-
 -- Private omni messages between players, in-character.
 ix.command.Add("Omni", {
 	description = "Communicate with another player via Omnitool.",
@@ -69,3 +34,30 @@ ix.command.Add("OmniReply", {
 		end
 	end
 })
+
+-- Broadcast on Cerberus Network --
+do
+	local COMMAND = {}
+	COMMAND.description = "Broadcast over the secure Cerberus network."
+	COMMAND.arguments = ix.type.text
+
+	function COMMAND:OnRun(client, message)
+		local character = client:GetCharacter()
+		local item
+
+		if (character:GetFaction() == FACTION_CERBERUS) then
+			if (!client:IsRestricted()) then
+				if message != '' then
+					ix.chat.Send(client, "cerberus", message)
+				else
+					return "@cerberusEmptyMessageEmptyMessage"
+				end
+			else
+				return "@notNow"
+			end
+		else
+			return "@cerberusNoAccess"
+		end
+	end
+	ix.command.Add("Cerberus", COMMAND)
+end

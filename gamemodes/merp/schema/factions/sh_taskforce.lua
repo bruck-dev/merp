@@ -8,3 +8,8 @@ FACTION.models = {
 	"models/player/barney.mdl",
     "models/player/alyx.mdl"
 }
+
+function FACTION:OnTransferred(target)
+    target:SetClass(CLASS_TASKFORCE); 	
+    target:SetCustomClass(nil);	
+end

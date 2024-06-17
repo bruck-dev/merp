@@ -1,6 +1,6 @@
 ITEM.name = "Frag Grenade"
 ITEM.description = "A canister-shaped frag grenade that explodes a few seconds after it is thrown."
-ITEM.model = "models/weapons/w_grenade.mdl"
+ITEM.model = "models/mass_effect_3/weapons/misc/grenade.mdl"
 ITEM.class = "weapon_frag"
 ITEM.weaponCategory = "grenade"
 ITEM.classes = {CLASS_EOW}

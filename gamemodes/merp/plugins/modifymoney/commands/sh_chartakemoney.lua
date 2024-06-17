@@ -1,7 +1,7 @@
 ix.command.Add("CharTake".. string.gsub(ix.util.ExpandCamelCase(ix.currency.plural), "%s", ""), {
 	alias = {"CharTakeMoney"},
 	description = "Removes currency from a player's current balance.",
-	superAdminOnly = true,
+	adminOnly = true,
 	arguments = {
 		ix.type.character,
 		ix.type.number

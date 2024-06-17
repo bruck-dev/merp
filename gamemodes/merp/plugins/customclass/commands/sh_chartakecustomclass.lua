@@ -1,10 +1,7 @@
 ix.command.Add("CharTakeCustomClass", {
 	description = "Remove a character's custom class.",
 	adminOnly = true,
-	arguments = {
-		ix.type.character,
-		ix.type.string
-	},
+	arguments = ix.type.character,
     OnRun = function(self, client, target)
         target:SetCustomClass(nil);
 

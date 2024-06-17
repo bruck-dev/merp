@@ -3,6 +3,7 @@ ITEM.name = "Generic Item"
 ITEM.description = "Generic Description"
 ITEM.model = Model("models/maxofs2d/hover_rings.mdl")
 ITEM.noBusiness = true
+ITEM.category = "Utility";
 
 function ITEM:GetName()
 	return self:GetData("name", "Custom Item")

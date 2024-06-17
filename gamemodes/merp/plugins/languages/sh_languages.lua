@@ -7,10 +7,10 @@
 -- @realm shared
 -- @string acronym - Becomes the shorthand command in the chat.
 -- @string name - Name of the language as a variable, this is what you use to assign it.
--- @assignment - /CharSetLang <name>
+-- @assignment - /CharAddLang <name>
 
 ix.language.Add("tur", "Turian")
-ix.language.Add("qua", "Khelish")
+ix.language.Add("qua", "Quarian")
 ix.language.Add("sal", "Salarian")
 ix.language.Add("asa", "Asari")
 ix.language.Add("kro", "Krogan")

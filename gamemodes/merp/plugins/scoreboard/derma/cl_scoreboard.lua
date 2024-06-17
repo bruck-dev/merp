@@ -306,7 +306,7 @@ function PANEL:Init()
 			local class = character:GetCustomClass()
 
 			-- Backup case in the event that no custom class has been set on a character
-			if class == "NULL" then
+			if class == "NULL" or class == nil then
 				class = character:GetClassName() or "ERROR"
 			end
 			

@@ -8,7 +8,7 @@ ITEM.height = 2
 ITEM.noBusiness = true
 
 ITEM.iconCam = {
-	ang	= Angle(0, -2.5, 0),
+	ang	= Angle(0, 3, 0),
 	fov	= 20,
 	pos	= Vector(-150, 0, 0)
 }

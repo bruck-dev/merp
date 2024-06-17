@@ -4,6 +4,7 @@
 --]]
 
 ix.command.Add("AdminSpawnMenu", {
+	description = "Opens an interface for spawning scripted items.",
     adminOnly = true,
 	OnRun = function(self, client)
 		net.Start("adminSpawnMenu")

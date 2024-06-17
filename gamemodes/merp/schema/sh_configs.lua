@@ -1,7 +1,7 @@
-
-ix.currency.symbol = ""
+ix.currency.symbol = "cr"
 ix.currency.singular = "Credit"
 ix.currency.plural = "Credits"
 
-ix.config.SetDefault("scoreboardRecognition", true)
-ix.config.SetDefault("maxAttributes", 60)
+ix.config.SetDefault("scoreboardRecognition", false)
+ix.config.SetDefault("maxAttributes", 10)
+ix.config.SetDefault("year", 2183)

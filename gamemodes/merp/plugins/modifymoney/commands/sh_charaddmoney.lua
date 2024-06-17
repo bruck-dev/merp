@@ -1,7 +1,7 @@
 ix.command.Add("CharAdd".. string.gsub(ix.util.ExpandCamelCase(ix.currency.plural), "%s", ""), {
 	alias = {"CharAddMoney"},
 	description = "Add currency to a player's current balance.",
-	superAdminOnly = true,
+	adminOnly = true,
 	arguments = {
 		ix.type.character,
 		ix.type.number

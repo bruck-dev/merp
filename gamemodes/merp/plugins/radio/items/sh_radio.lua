@@ -1,6 +1,7 @@
-ITEM.name = "Communicator"
+ITEM.name = "Radio"
 ITEM.model = Model("models/props_lab/reciever01a.mdl")
-ITEM.description = "A helmet-implanted radio with a frequency tuner.\nIt is currently turned %s%s."
+ITEM.description = "A radio with a frequency tuner.\nIt is currently turned %s%s."
+ITEM.category = "Tools";
 ITEM.width = 2
 ITEM.height = 1
 ITEM.cost = 50
@@ -27,6 +28,7 @@ function ITEM.postHooks.drop(item, status)
 end
 
 ITEM.functions.Frequency = {
+	icon = "icon16/cog_edit.png",
 	OnRun = function(itemTable)
 		netstream.Start(itemTable.player, "Frequency", itemTable:GetData("frequency", "000.0"))
 
@@ -35,6 +37,7 @@ ITEM.functions.Frequency = {
 }
 
 ITEM.functions.Toggle = {
+	icon = "icon16/ipod_cast.png",
 	OnRun = function(itemTable)
 		local character = itemTable.player:GetCharacter()
 		local radios = character:GetInventory():GetItemsByUniqueID("radio", true)

@@ -12,44 +12,24 @@ local panelHeight = 800
 local groups = {
 	["All"] = {},
 	["Consumables"] = {
-		"Bread",
-		"Australian",
-		"Alcohol",
-		"Civil-Approved Drinks",
-		"Containers",
-		"Civil-Approved Food",
-		"Non-Approved Drinks",
-		"Non-Approved Food",
-		"Rations",
+		"Food",
+		"Beverage",
+		"Smokable",
+		"Medical"
 	},
 	["Clothing"] = {
-		"Clothing",
-		"Clothing - Contraband",
-		"Clothing - MCS",
-		"Storage",
 	},
 	["Weaponry"] = {
 		"Melee",
-		"Deployables",
 		"Weapons",
 		"Ammunition"
 	},
-	["Materials"] = {
-		"Contraband",
-		"Crafting",
-		"Xen",
-		"Liquid"
-	},
 	["Miscellaneous"] = {
-		"Medical",
-		"Literature",
-		"misc",
 		"Other",
 		"Tools",
-		"Utilities"
 	},
 	["Gamemaster"] = {
-		"Blueprint"
+		"Utilities"
 	}
 }
 
@@ -71,7 +51,7 @@ function PANEL:Init()
 	self:MakePopup()
     self:SetSize(panelWidth, panelHeight)
 	
-	-- Called when the button is clicked.
+	-- Called when the button is clicked.6
 	function self.btnClose.DoClick(button)
 		self:Close(); 
 		self:Remove();
