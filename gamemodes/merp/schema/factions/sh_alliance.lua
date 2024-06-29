@@ -1,6 +1,6 @@
 FACTION.name = "Alliance"
 FACTION.description = "A member of the Alliance Military."
-FACTION.isDefault = false
+FACTION.isDefault = true
 FACTION.color = Color(49, 136, 215, 255)
 FACTION_ALLIANCE = FACTION.index
 

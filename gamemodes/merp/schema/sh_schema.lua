@@ -15,6 +15,8 @@ ix.util.Include("cl_hooks.lua")
 ix.util.Include("sh_hooks.lua")
 
 ix.util.Include("libs/thirdparty/sh_netstream2.lua")
+ix.util.Include("meta/sh_player.lua")
+ix.util.Include("meta/sh_character.lua")
 
 -- MODEL MANAGEMENT --
 ix.anim.SetModelClass("models/player/barney.mdl", "player")
