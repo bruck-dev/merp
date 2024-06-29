@@ -1,1 +1,1 @@
-ix.flag.Add("B", "Access to biotics.") -- doesn't do anything atm
+--ix.flag.Add("B", "Access to biotics.") -- doesn't do anything atm

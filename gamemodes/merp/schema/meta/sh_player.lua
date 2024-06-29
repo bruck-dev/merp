@@ -8,5 +8,5 @@ end
 function playerMeta:IsAlliance()
 	local faction = self:Team()
     local class = self:GetCharacter():GetClass()
-	return faction == FACTION_ALLIANCE || class == CLASS_CERBERUS_UNDERCOVER
+	return faction == FACTION_ALLIANCE || class == CLASS_CERBERUS_UNDERCOVER_ALLIANCE || class == CLASS_CERBERUS_UNDERCOVER_TASKFORCE
 end

@@ -1,4 +1,4 @@
-ix.currency.symbol = "cr"
+ix.currency.symbol = ""
 ix.currency.singular = "Credit"
 ix.currency.plural = "Credits"
 

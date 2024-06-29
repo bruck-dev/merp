@@ -11,5 +11,5 @@ FACTION.models = {
 
 function FACTION:OnTransferred(target)
     target:SetClass(CLASS_TASKFORCE); 	
-    target:SetCustomClass(nil);	
+    -- target:SetCustomClass(nil);	
 end

@@ -16,5 +16,5 @@ FACTION.models = {
 
 function FACTION:OnTransferred(target)
     target:SetClass(CLASS_CERBERUS); 	
-    target:SetCustomClass(nil);	
+    -- target:SetCustomClass(nil);	
 end
