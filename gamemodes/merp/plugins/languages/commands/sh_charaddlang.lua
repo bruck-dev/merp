@@ -3,7 +3,7 @@
 	without permission of its author.
 --]]
 
-ix.command.Add("CharAddLang", {
+ix.command.Add("CharGiveLang", {
 	description = "Adds a language to a character.",
 	adminOnly = true,
 	arguments = {

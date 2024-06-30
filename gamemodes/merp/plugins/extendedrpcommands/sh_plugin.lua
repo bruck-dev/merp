@@ -7,11 +7,6 @@ PLUGIN.name = "Extended Roleplay Commands";
 PLUGIN.description = "Adds additional roleplay commands that aren't in base helix.";
 PLUGIN.author = "Adolphus";
 
-ix.config.Add("yellRange", 280, "The maximum distance a person's IC chat message goes to.", nil, {
-	data = {min = 10, max = 5000, decimals = 1},
-	category = "chat"
-})
-
 ix.chat.Register("meL", {
 	OnChatAdd = function(self, speaker, text, anonymous)
 		if (!IsValid(speaker)) then

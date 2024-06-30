@@ -1,12 +1,14 @@
+local hookRun = hook.Run
+
 function PLUGIN:PopulateImportantCharacterInfo(client, character, container)
-	local color = character.GetClassColor()
-	container:SetArrowColor(color)
+	local classColor = character:GetClassColor()
+	container:SetArrowColor(classColor)
 
 	-- name
 	local name = container:AddRow("name")
 	name:SetImportant()
 	name:SetText(hookRun("GetCharacterName", client) or character:GetName())
-	name:SetBackgroundColor(color)
+	name:SetBackgroundColor(classColor)
 	name:SizeToContents()
 
 	-- injured text
