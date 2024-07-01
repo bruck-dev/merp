@@ -27,7 +27,7 @@ do
 	end
 
 	function CLASS:OnChatAdd(speaker, text)
-		text = string.format("<<: %s :>>", text)
+		text = string.format("<:: %s ::>", text)
 		chat.AddText(self.color, string.format(self.format, speaker:Name(), text))
 	end
 
@@ -56,7 +56,7 @@ do
 	end
 
 	function CLASS:OnChatAdd(speaker, text)
-		text = string.format("<<: %s :>>", text)
+		text = string.format("<:: %s ::>", text)
 		chat.AddText(self.color, string.format(self.format, speaker:Name(), text))
 	end
 
@@ -85,7 +85,7 @@ do
 	end
 
 	function CLASS:OnChatAdd(speaker, text)
-		text = string.format("<<: %s :>>", text)
+		text = string.format("<:: %s ::>", text)
 		chat.AddText(self.color, string.format(self.format, speaker:Name(), text))
 	end
 

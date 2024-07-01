@@ -692,7 +692,7 @@ function GM:GetInjuredText(client)
 end
 
 function GM:PopulateImportantCharacterInfo(client, character, container)
-	local color = team.GetColor(client:Team())
+	local color = character:GetClassColor() --team.GetColor(client:Team())
 	container:SetArrowColor(color)
 
 	-- name

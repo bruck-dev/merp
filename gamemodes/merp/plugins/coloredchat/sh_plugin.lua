@@ -20,6 +20,11 @@ hook.Add("InitializedConfig", "ixChatTypes", function()
                 return
             end
 
+            if (ix.config.Get("jamTranslators")) then
+                speaker:NotifyLocalized("Your translator is jammed!")
+                return
+            end
+
             local name = anonymous and
             L"someone" or hook.Run("GetCharacterName", speaker, "me") or
             (IsValid(speaker) and speaker:Name() or "Console")
@@ -83,6 +88,12 @@ hook.Add("InitializedConfig", "ixChatTypes", function()
             if (!IsValid(speaker)) then
                 return
             end
+            
+            if (ix.config.Get("jamTranslators")) then
+                speaker:NotifyLocalized("Your translator is jammed!")
+                return
+            end
+
             local name = anonymous and
             L"someone" or hook.Run("GetCharacterName", speaker, "me") or
             (IsValid(speaker) and speaker:Name() or "Console")
@@ -108,6 +119,12 @@ hook.Add("InitializedConfig", "ixChatTypes", function()
             if (!IsValid(speaker)) then
                 return
             end
+
+            if (ix.config.Get("jamTranslators")) then
+                speaker:NotifyLocalized("Your translator is jammed!")
+                return
+            end
+
             local name = anonymous and
             L"someone" or hook.Run("GetCharacterName", speaker, "me") or
             (IsValid(speaker) and speaker:Name() or "Console")

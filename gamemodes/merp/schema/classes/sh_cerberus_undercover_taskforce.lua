@@ -4,7 +4,7 @@ CLASS.isDefault = false
 CLASS.color = Color(255, 255, 255, 255)
 CLASS.order = 10
 
-CLASS_CERBERUS_UNDERCOVER_TASKFORCE = CLASS.index
+CLASS_TFCERBERUS = CLASS.index
 
 function CLASS:CanSwitchTo(client)
 	return true

@@ -8,6 +8,10 @@ do
 		local radios = character:GetInventory():GetItemsByUniqueID("radio", true)
 		local item
 
+		if (ix.config.Get("jamTranslators")) then
+			return "Your translator is jammed!"
+		end
+
 		for k, v in ipairs(radios) do
 			if (v:GetData("enabled", false)) then
 				item = v
@@ -45,6 +49,10 @@ do
 		local radios = character:GetInventory():GetItemsByUniqueID("radio", true)
 		local item
 
+		if (ix.config.Get("jamTranslators")) then
+			return "Your translator is jammed!"
+		end
+
 		for k, v in ipairs(radios) do
 			if (v:GetData("enabled", false)) then
 				item = v
@@ -81,6 +89,10 @@ do
 		local character = client:GetCharacter()
 		local radios = character:GetInventory():GetItemsByUniqueID("radio", true)
 		local item
+
+		if (ix.config.Get("jamTranslators")) then
+			return "Your translator is jammed!"
+		end
 
 		for k, v in ipairs(radios) do
 			if (v:GetData("enabled", false)) then
